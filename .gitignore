@@ -1,0 +1,16 @@
+/build/
+/out/
+/test.data/
+/test.out/
+/user.home*/
+~*
+*.log
+/*.jar
+hs_err_pid*
+.settings/
+/*.log
+/*.conf
+/*.sha256.txt
+qs_explorer_result/
+qs_scan_result/
+qs_scan_result.zip
