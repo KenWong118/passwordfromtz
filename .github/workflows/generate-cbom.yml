@@ -24,19 +24,19 @@ jobs:
       - name: Install cdxgen
         run: npm install -g @cyclonedx/cdxgen
 
-      - name: Generate cbom16.json
-        run: cdxgen --type java --include-crypto --evidence --deep --spec-version 1.6 --profile appsec -o cbom16.json
+      - name: Generate cbom616.json
+        run: cdxgen --type java --include-crypto --evidence --deep --spec-version 1.6 --profile appsec -o cbom616.json
 
-      - name: Commit and push updated cbom16.json
+      - name: Commit and push updated cbom616.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add cbom16.json
+          git add cbom616.json
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "chore: update cbom16.json [skip ci]"
+          git commit -m "chore: update cbom616.json [skip ci]"
           git push
 
 # Made with Bob
