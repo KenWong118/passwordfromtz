@@ -51,6 +51,8 @@ jobs:
         id: cbom
         env:
           CBOMKIT_LANGUAGES: java
+          CBOMKIT_EXCLUDE: ""
+          CBOMKIT_JAVA_JAR_DIR: lib
       - name: Upload CBOM artifacts
         # Allows persisting the CBOMs after job completion and
         # sharing them with another job in the same workflow.
