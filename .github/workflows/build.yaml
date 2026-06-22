@@ -38,6 +38,14 @@ jobs:
             dist/PasswordSafe.jar
             dist/PasswordSafe.jar.sha256.txt
           if-no-files-found: error
+      - name: Debug source tree
+        run: |
+          echo "Java files:"
+          find src -name "*.java" | wc -l
+          echo "Crypto references:"
+          grep -R "org.bouncycastle" src | head
+          grep -R "Cipher.getInstance" src | head
+          grep -R "MessageDigest" src | head
       - name: Create CBOM
         uses: cbomkit/cbomkit-action@v2.1.2
         id: cbom
